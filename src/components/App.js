@@ -1,17 +1,21 @@
 import React, {Component} from "react";
-import {fetchTickets} from "../ac";
+import {fetchTickets, fetchFilters} from "../ac";
 import {connect} from "react-redux";
 import Dashboard from "./Dashboard";
+import Filters from "./Filters"
+
 
 class App extends Component {
 	componentWillMount() {
 		this.props.fetchTickets();
+		this.props.fetchFilters();
 	}
 	
 	render() {
-		const {tickets} = this.props;
+		const {tickets, filters} = this.props;
 		return (
 			<div className="app">
+				<Filters filters={filters}/>
 				<Dashboard tickets={tickets}/>
 			</div>
 		);
@@ -19,9 +23,10 @@ class App extends Component {
 }
 
 const mapStateToProps = {
-	fetchTickets
+	fetchTickets,
+	fetchFilters
 };
 
-export default connect(state => ({tickets: state.tickets}), mapStateToProps)(
+export default connect(state => ({tickets: state.tickets, filters: state.filters}), mapStateToProps)(
 	App
 );

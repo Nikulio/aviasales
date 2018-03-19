@@ -28,7 +28,6 @@ class Dashboard extends Component {
 						<TicketCity from={tickets[element].departure.city} to={tickets[element].arrival.city}/>
 						<TicketDate from={tickets[element].departure.date} to={tickets[element].arrival.date}/>
 					
-					
 					</div>
 				</div>
 			);

@@ -45,5 +45,28 @@
       },
       "transfers": 3
     }
-  }
+  },
+  "filters" : [
+    {
+      "text": "All transfers",
+      "name": "all_transfers"
+    },
+    {
+      "text": "No transfers",
+      "name": "no_transfers"
+    },
+    {
+      "text": "1 transfer",
+      "name": "1_transfer"
+    },
+    {
+      "text": "2 transfers",
+      "name": "2_transfers"
+    },
+
+    {
+      "text": "3 transfers",
+      "name": "3_transfers"
+    }
+  ]
 }

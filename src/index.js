@@ -7,7 +7,7 @@ import { Provider } from "react-redux";
 import reducers from "./reducers";
 import createSagaMiddleware from "redux-saga";
 import { rootSaga } from "./sagas";
-import "./index.scss"
+import "./index.scss";
 const sagaMiddleware = createSagaMiddleware();
 const reduxDevTools =
 	window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__();
