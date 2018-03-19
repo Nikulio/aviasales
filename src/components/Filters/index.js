@@ -1,13 +1,14 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import Form from "./Form"
+import "./index.scss"
 
 class Filters extends Component {
 	render() {
 		let {filters} = this.props;
 		return (
 			<div className="filters">
-				<h2>How many transfers?</h2>
+				<h2 className="title">How many transfers?</h2>
 				<Form filters={filters}/>
 			</div>
 		);

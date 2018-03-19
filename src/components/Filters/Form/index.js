@@ -4,11 +4,10 @@ import { Field, reduxForm } from 'redux-form'
 let Form = props => {
 	
 	const { handleSubmit, filters } = props;
-	console.log("--- filters", filters);
 	const data = filters ? Object.keys(filters).map(element => {
 		let key = `form_filter_${element}`;
 		return (
-			<div className="input-wrap" key={key}>
+			<div className="input-wrap filter" key={key}>
 				<Field name={filters[element].name} id={filters[element].name} component='input' type="checkbox"/>
 				<span className="filter__name">
 					{filters[element].text}

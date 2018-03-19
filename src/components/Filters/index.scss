@@ -1,0 +1,47 @@
+@import "../../colors";
+
+.filters {
+  background: $white;
+  border: 1px solid $grey;
+  margin-right: 5%;
+  min-width: 30%;
+  .title {
+    padding: 0 20px;
+  }
+  .filter {
+    padding: 5px 20px;
+    transition: .3s all;
+    background: $white;
+    display: flex;
+    align-items: center;
+    &:hover {
+      background: rgba(92, 171, 233, 0.13);
+      .filter__name {
+        opacity: 1;
+      }
+    }
+    input[type="checkbox"] {
+      background: transparent;
+      border: 1px solid $dark_grey;
+      outline: none;
+      width: 15px;
+      border-radius: 3px;
+      margin-right: 10px;
+      height: 15px;
+      transition: .3s all;
+      &:hover {
+        border-color: $blue;
+        cursor: pointer;
+      }
+    }
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+    .filter__name {
+      color: $text_grey;
+      opacity: .7;
+      transition: .3s all;
+      font-weight: 200;
+    }
+  }
+}
