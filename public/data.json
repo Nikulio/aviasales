@@ -1,0 +1,49 @@
+{
+  "tickets": {
+    "ticket_1": {
+      "image": "/img/logo.png",
+      "price": "12 322",
+      "departure": {
+        "time": "09:25",
+        "date": "9 oct 2016, Fr",
+        "city": "VVO, Vladivostok"
+      },
+      "arrival": {
+        "time": "12:05",
+        "date": "9 oct 2016, Fr",
+        "city": "TLV, Tel a vi"
+      },
+      "transfers": 0
+    },
+    "ticket_2": {
+      "image": "/img/logo.png",
+      "price": "12 322",
+      "departure": {
+        "time": "09:25",
+        "date": "9 oct 2016, Fr",
+        "city": "VVO, Vladivostok"
+      },
+      "arrival": {
+        "time": "12:05",
+        "date": "9 oct 2016, Fr",
+        "city": "TLV, Tel a vi"
+      },
+      "transfers": 2
+    },
+    "ticket_3": {
+      "image": "/img/logo.png",
+      "price": "12 322",
+      "departure": {
+        "time": "09:25",
+        "date": "9 oct 2016, Fr",
+        "city": "VVO, Vladivostok"
+      },
+      "arrival": {
+        "time": "12:05",
+        "date": "9 oct 2016, Fr",
+        "city": "TLV, Tel a vi"
+      },
+      "transfers": 3
+    }
+  }
+}
