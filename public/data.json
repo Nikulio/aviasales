@@ -13,7 +13,9 @@
         "date": "9 oct 2016, Fr",
         "city": "TLV, Tel a vi"
       },
-      "transfers": 0
+      "transfers": 0,
+      "name": "no_transfers"
+
     },
     "ticket_2": {
       "image": "/img/logo.png",
@@ -28,7 +30,9 @@
         "date": "9 oct 2016, Fr",
         "city": "TLV, Tel a vi"
       },
-      "transfers": 2
+      "transfers": 2,
+      "name": "transfer_2"
+
     },
     "ticket_3": {
       "image": "/img/logo.png",
@@ -43,10 +47,12 @@
         "date": "9 oct 2016, Fr",
         "city": "TLV, Tel a vi"
       },
-      "transfers": 3
+      "transfers": 3,
+      "name": "transfer_3"
+
     }
   },
-  "filters" : [
+  "filters": [
     {
       "text": "All transfers",
       "name": "all_transfers"
@@ -57,16 +63,15 @@
     },
     {
       "text": "1 transfer",
-      "name": "1_transfer"
+      "name": "transfer_1"
     },
     {
       "text": "2 transfers",
-      "name": "2_transfers"
+      "name": "transfer_2"
     },
-
     {
       "text": "3 transfers",
-      "name": "3_transfers"
+      "name": "transfer_3"
     }
   ]
 }

@@ -1,5 +1,6 @@
 import React, {Component} from "react";
 import PropTypes from "prop-types";
+import {connect} from "react-redux"
 
 
 //dummy
@@ -11,9 +12,28 @@ import TicketTime from "../../presentational/TicketTime"
 import "./index.scss";
 
 class Dashboard extends Component {
+	state = {
+		all_transfers: false,
+		no_transfers: false,
+		transfer_1: false,
+		transfer_2: false,
+		transfer_3: false
+	};
 	handleTickets = () => {
+		// let {all_transfers, no_transfers, transfer_1, transfer_2, transfer_3} = this.state;
+		
+		
+		
 		const {tickets} = this.props;
+		const state = this.state;
 		return Object.keys(tickets).map(element => {
+			let active;
+			Object.keys(this.state).map(elem => {
+				console.log("--- state.", this.state[elem])
+			})
+			const targ = tickets[element].name;
+			console.log("--- ", targ)
+			console.log("--- this", this.state[targ]);
 			return (
 				<div className="ticket" key={element}>
 					<div className="left-side">
@@ -34,13 +54,37 @@ class Dashboard extends Component {
 		});
 	};
 	
+	
+	
+	handleCheckboxes = () => {
+		const {activeFilters} = this.props;
+		const {all_transfers, no_transfers, transfer_1, transfer_2, transfer_3} = activeFilters;
+		if (all_transfers !== this.state.all_transfers) {
+			this.setState({all_transfers})
+		}
+		else if (no_transfers !== this.state.no_transfers) {
+			this.setState({no_transfers})
+		} 
+		else if (transfer_1 !== this.state.transfer_1) {
+			this.setState({transfer_1})
+		}
+		else if (transfer_2 !== this.state.transfer_2) {
+			this.setState({transfer_2})
+		}
+		else if (transfer_3 !== this.state.transfer_3) {
+			this.setState({transfer_3})
+		}
+	};
+	
+	
 	render() {
+		this.handleCheckboxes();
 		return <div className="tickets">{this.handleTickets()}</div>;
 	}
 }
 
 Dashboard.propTypes = {
-	tickets: PropTypes.object.isRequired
+	tickets: PropTypes.object.isRequired,
 };
 
 export default Dashboard;

@@ -1,4 +1,4 @@
-import { takeLatest, call, put } from "redux-saga/effects";
+import { takeLatest, call, put, takeEvery } from "redux-saga/effects";
 import * as actions from "./ac";
 import axios from "axios";
 
@@ -36,9 +36,23 @@ function* workerSaga() {
 	}
 }
 
+function* workerCheckboxes(data) {
+	try {
+		const {payload} = data;
+		yield put({
+			type: actions.HANDLE_CHECKBOXES,
+			payload
+		})
+	} catch (error) {
+		yield put({ type: "API_CALL_FAILURE", error });
+	}
+
+}
+
 export function* rootSaga() {
 	yield [
 		takeLatest(actions.FETCH_TICKETS_REQUEST, workerSaga),
 		takeLatest(actions.FETCH_FILTERS_REQUEST, workerFiltersSaga),
+		takeEvery(actions.HANDLE_CHECKBOXES_REQUEST, workerCheckboxes)
 	]
 }

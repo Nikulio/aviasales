@@ -5,7 +5,9 @@
   border: 1px solid $grey;
   margin-right: 5%;
   min-width: 30%;
+  padding: 20px 0;
   .title {
+    margin-bottom: 20px;
     padding: 0 20px;
   }
   .filter {
@@ -39,6 +41,8 @@
     }
     .filter__name {
       color: $text_grey;
+      font-size: 14px;
+      text-transform: lowercase;
       opacity: .7;
       transition: .3s all;
       font-weight: 200;

@@ -12,11 +12,11 @@ class App extends Component {
 	}
 	
 	render() {
-		const {tickets, filters} = this.props;
+		const {tickets, filters, activeFilters} = this.props;
 		return (
 			<div className="app">
 				<Filters filters={filters}/>
-				<Dashboard tickets={tickets}/>
+				<Dashboard tickets={tickets} activeFilters={activeFilters}/>
 			</div>
 		);
 	}
@@ -27,6 +27,10 @@ const mapStateToProps = {
 	fetchFilters
 };
 
-export default connect(state => ({tickets: state.tickets, filters: state.filters}), mapStateToProps)(
+export default connect(state => ({
+	tickets: state.tickets,
+	filters: state.filters,
+	activeFilters: state.activeFilters
+}), mapStateToProps)(
 	App
 );
