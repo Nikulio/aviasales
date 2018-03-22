@@ -2,3 +2,4 @@
 /node_modules
 .IDEA
 .idea
+.DS_Store

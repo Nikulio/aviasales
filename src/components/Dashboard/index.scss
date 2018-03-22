@@ -1,65 +1,69 @@
 @import "../../colors";
 
 .tickets {
-  max-width: 600px;
-  width: 100%;
-  margin: 0 auto;
-  min-width: 65%;
-  .ticket {
-    width: 100%;
-    display: flex;
-    background: $white;
-    border: 1px solid $grey;
-    border-radius: 10px;
-    margin-bottom: 20px;
-    transition: .3s all;
-    &:hover {
-      box-shadow: 0 7px 14px 0 rgba(0, 0, 0, 0.41);
-    }
-    &:last-of-type {
-      margin-bottom: 0;
-    }
+	max-width: 600px;
+	width: 100%;
+	margin: 0 auto;
+	min-width: 65%;
+	.ticket {
+		width: 100%;
+		display: flex;
+		background: $white;
+		border: 1px solid $grey;
+		border-radius: 10px;
+		margin-bottom: 20px;
+		transition: 0.3s all;
+		opacity: 0;
+		&.visible {
+			opacity: 1;
+		}
+		&:hover {
+			box-shadow: 0 7px 14px 0 rgba(0, 0, 0, 0.41);
+		}
+		&:last-of-type {
+			margin-bottom: 0;
+		}
 
-    .left-side {
-      max-width: 260px;
-      padding: 20px;
-      border-right: 1px solid $grey;
-      img {
-        width: 100%;
-        display: block;
-        margin-bottom: 20px;
-      }
-    }
-    .right-side {
-      padding: 20px;
-      width: 100%;
-      .right-side__element {
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        &:first-of-type {
-          margin-bottom: 20px;
-        }
-        .ticket__transfers {
-          img {
-            display: block;
-            width: 80px;
-            margin-top: 20px;
-          }
-        }
-        .ticket__time-text {
-          font-size: 36px;
-          font-weight: 200;
-        }
-        .ticket-date__text {
-          font-size: 12px;
-          color: $dark_grey;
-        }
-        .ticket-city__text {
-          font-size: 16px;
-        }
-      }
-    }
-  }
+		.left-side {
+			max-width: 260px;
+			padding: 20px;
+			border-right: 1px solid $grey;
+			img {
+				width: 100%;
+				display: block;
+				margin-bottom: 20px;
+			}
+		}
+		.right-side {
+			padding: 20px;
+			width: 100%;
+			.right-side__element {
+				width: 100%;
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				&:first-of-type {
+					margin-bottom: 20px;
+				}
+				.ticket__transfers {
+					img {
+						display: block;
+						width: 80px;
+						margin-top: 20px;
+					}
+				}
+				.ticket__time-text {
+					font-size: 36px;
+					font-weight: 200;
+				}
+				.ticket-date__text {
+					font-size: 12px;
+					color: $dark_grey;
+				}
+				.ticket-city__text {
+					font-size: 16px;
+				}
+			}
+		}
+	}
 }
